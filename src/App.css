@@ -1,38 +1,158 @@
-.App {
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+.app {
+  display: flex;
+}
+
+.menu {
+  width: 200px;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 20px 8px;
+}
+
+.menu ul li {
+  padding: 10px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu ul li a span {
+  padding-left: 10px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* country page */
+.country {
+}
+
+.contry_title {
+}
+
+.country table {
+  border-collapse: collapse;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.country table,
+th,
+td {
+  border: 1px solid;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.country table thead {
+  height: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.country table thead th {
+  padding: 8px 8px;
+}
+
+.country table tbody td {
+  padding: 8px 8px;
+}
+
+.country button {
+  font-size: 16px;
+  font-weight: 400;
+  display: inline-block;
+  color: #fff;
+  border-radius: 0.25em;
+  text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.4);
+  line-height: 40px;
+  transition: ease-in-out 0.2s;
+  padding: 0 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.country button:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 99999px rgba(0, 0, 0, 0.2);
+}
+
+.country_btn_add {
+  background-color: #2ecc71;
+  margin: 20px 0px;
+}
+
+.country_btn_edit {
+  background-color: #3498db;
+  margin: 4px 4px;
+}
+
+.country_btn_delete {
+  background-color: #c0392b;
+  margin: 4px 4px;
+}
+
+.country_btn_save {
+  background-color: #2ecc71;
+}
+
+.country_btn_cancel {
+  background-color: #c0392b;
+}
+
+/* popup */
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(49, 49, 49, 0.8);
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #f1f1f1;
+  padding: 14px 28px;
+  border-radius: 0.25em;
+  max-width: 600px;
+  min-width: 300px;
+}
+
+.popup_content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.popup_content input {
+  padding: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.popup button {
+  margin: 12px 12px 12px 0px;
+}
+
+.errorsMsg {
+  color: #c0392b;
 }
